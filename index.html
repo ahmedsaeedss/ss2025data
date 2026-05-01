@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS 2025 Data Collection Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .bg-glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-green-50 flex items-center justify-center p-4 sm:p-8 font-sans relative overflow-x-hidden"
+  style="background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(134,239,172,0.3), rgba(255,255,255,1));">
+  <div
+    class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-green-300/40 rounded-full mix-blend-multiply filter blur-[100px] pointer-events-none">
+  </div>
+  <div
+    class="absolute bottom-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-emerald-300/40 rounded-full mix-blend-multiply filter blur-[120px] pointer-events-none">
+  </div>
+
+  <div
+    class="w-full max-w-4xl bg-glass shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] rounded-3xl p-6 sm:p-10 relative z-10 flex flex-col">
+    <div class="text-center mb-8 sm:mb-10 space-y-2">
+      <h1
+        class="text-2xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-emerald-600 tracking-tight leading-tight">
+        SS 2025 Data Collection Form
+      </h1>
+      <p class="text-green-800/60 mt-2 text-xs sm:text-base font-medium tracking-wide uppercase">
+        Subject Specialist BPS-17
+      </p>
+      <p class="text-green-700 mt-4 text-[10px] sm:text-sm font-medium italic opacity-80 leading-relaxed px-4">
+        This data is being collected for the preparation of the Subject Specialist (2025) Seniority List.
+      </p>
+    </div>
+
+    <form id="seniorityForm" class="space-y-6 flex-grow">
+
+      <!-- Section: Personal Information -->
+      <div class="col-span-1 md:col-span-2 pb-2 border-b border-green-200/70 mb-4">
+        <h3 class="text-lg font-bold text-green-800 tracking-wide flex items-center gap-2">
+          <i data-lucide="user" class="w-5 h-5 text-green-600"></i> Personal Information
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Name of Officer <span
+              class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="user" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="text" name="name" required placeholder="e.g., Ahmed Saeed"
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Gender <span class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div
+              class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors pointer-events-none z-10">
+              <i data-lucide="users" class="w-[18px] h-[18px]"></i>
+            </div>
+            <select name="gender" required
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-10 text-gray-900 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 appearance-none cursor-pointer hover:bg-white/80 [&>option]:bg-white [&>option]:text-gray-900">
+              <option value="" disabled selected>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <div class="absolute right-4 text-gray-400 pointer-events-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Date of Birth <span
+              class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="calendar" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="date" name="dob" required
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">District <span class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="map-pin" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="text" name="district" required placeholder="e.g., Naushahro Feroze"
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section: Service & Seniority Details -->
+      <div class="col-span-1 md:col-span-2 pb-2 border-b border-green-200/70 mt-6 mb-4">
+        <h3 class="text-lg font-bold text-green-800 tracking-wide flex items-center gap-2">
+          <i data-lucide="briefcase" class="w-5 h-5 text-green-600"></i> Service & Seniority Details
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">SPSC Merit No <span
+              class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="hash" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="number" name="meritNo" required placeholder="e.g., 42"
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Subject <span class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div
+              class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors pointer-events-none z-10">
+              <i data-lucide="book" class="w-[18px] h-[18px]"></i>
+            </div>
+            <select name="subject" required
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-10 text-gray-900 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 appearance-none cursor-pointer hover:bg-white/80 [&>option]:bg-white [&>option]:text-gray-900">
+              <option value="" disabled selected>Select Subject</option>
+              <option value="English">English</option>
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Botany">Botany</option>
+              <option value="Zoology">Zoology</option>
+            </select>
+            <div class="absolute right-4 text-gray-400 pointer-events-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Entry in Govt. Service <span
+              class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="calendar" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="date" name="entryDate" required
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Appointment as SS BPS-17 <span
+              class="text-red-500">*</span></label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="calendar" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="date" name="appointmentDate" required
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section: Additional Information -->
+      <div class="col-span-1 md:col-span-2 pb-2 border-b border-green-200/70 mt-6 mb-4">
+        <h3 class="text-lg font-bold text-green-800 tracking-wide flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-green-600"></i> Additional Information
+        </h3>
+      </div>
+
+      <div class="w-full">
+        <div class="flex flex-col gap-1.5 w-full">
+          <label class="text-sm font-semibold text-gray-800 ml-1">Remarks (Optional)</label>
+          <div class="relative flex items-center group">
+            <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors">
+              <i data-lucide="file-text" class="w-[18px] h-[18px]"></i>
+            </div>
+            <input type="text" name="remarks" placeholder="Any additional notes..."
+              class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-4 text-gray-900 placeholder-gray-400 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 hover:bg-white/80">
+          </div>
+        </div>
+      </div>
+
+      <div id="statusMessage"
+        class="hidden p-4 rounded-xl flex items-center gap-3 border transition-all duration-300 mt-4">
+        <div id="statusIconContainer"></div>
+        <p id="statusText" class="text-sm font-medium"></p>
+      </div>
+
+      <div class="pt-6">
+        <button type="submit" id="submitBtn"
+          class="w-full relative overflow-hidden group bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold rounded-xl py-4 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed">
+          <div
+            class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+          </div>
+          <div class="relative flex items-center justify-center gap-2">
+            <span id="btnText">Submit Record</span>
+            <i id="btnIcon" data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            <i id="loaderIcon" data-lucide="loader-2" class="w-5 h-5 animate-spin hidden"></i>
+          </div>
+        </button>
+      </div>
+
+    </form>
+
+    <div class="mt-6 pt-4 border-t border-green-200/50 text-center">
+      <p class="text-green-800/60 text-[9px] sm:text-xs font-bold uppercase tracking-widest px-2">
+        Developed By : <span class="text-green-700">Ahmed Saeed Subject Specialist</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-green-900/20 backdrop-blur-sm"></div>
+    <div
+      class="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full relative z-10 transform transition-all duration-300 scale-90 opacity-0"
+      id="modalContent">
+      <div class="flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 animate-bounce">
+          <i data-lucide="check-circle" class="w-12 h-12 text-green-600"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">شکریہ!</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          آپ کا ڈیٹا کامیابی کے ساتھ جمع کر لیا گیا ہے۔
+        </p>
+        <button onclick="closeModal()"
+          class="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+          ٹھیک ہے
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxB2NEu5HFtzTihVZOJHEUwSb89-yEoJH248NpFjRqWp08SgtMZq_Yo3bBV1Cei0HOG/exec';
+    const form = document.getElementById('seniorityForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnIcon = document.getElementById('btnIcon');
+    const loaderIcon = document.getElementById('loaderIcon');
+    const statusMessage = document.getElementById('statusMessage');
+    const statusText = document.getElementById('statusText');
+    const statusIconContainer = document.getElementById('statusIconContainer');
+    const successModal = document.getElementById('successModal');
+    const modalContent = document.getElementById('modalContent');
+
+    function openModal() {
+      successModal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-90', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-90', 'opacity-0');
+      setTimeout(() => {
+        successModal.classList.add('hidden');
+      }, 300);
+    }
+
+    function showStatus(type, message) {
+      if (type === 'success') {
+        openModal();
+        return;
+      }
+
+      statusMessage.className = `p-4 rounded-xl flex items-center gap-3 border transition-all duration-300 mt-4 ${type === 'success'
+        ? 'bg-green-50 border-green-200 text-green-700'
+        : 'bg-red-50 border-red-200 text-red-700'
+        }`;
+
+      statusIconContainer.innerHTML = type === 'success'
+        ? '<i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>'
+        : '<i data-lucide="alert-circle" class="w-5 h-5 flex-shrink-0"></i>';
+
+      lucide.createIcons();
+      statusText.textContent = message;
+      statusMessage.classList.remove('hidden');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+        showStatus('error', 'Please add your Google Apps Script URL in the HTML file (Line 160).');
+        return;
+      }
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      submitBtn.disabled = true;
+      btnText.textContent = 'Submitting Data...';
+      btnIcon.classList.add('hidden');
+      loaderIcon.classList.remove('hidden');
+      statusMessage.classList.add('hidden');
+
+      try {
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+
+        if (result.status === 'success') {
+          openModal();
+          form.reset();
+        } else if (result.status === 'duplicate') {
+          showStatus('error', 'یہ ڈیٹا پہلے سے موجود ہے! (This record already exists in the list)');
+        } else {
+          showStatus('error', result.message || 'Submission failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showStatus('error', 'Network error. Make sure your Apps Script is deployed for "Anyone".');
+      } finally {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Submit Record';
+        btnIcon.classList.remove('hidden');
+        loaderIcon.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
