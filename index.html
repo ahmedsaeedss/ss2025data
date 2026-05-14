@@ -105,12 +105,12 @@
         </div>
 
         <div class="flex flex-col gap-1.5 w-full">
-          <label class="text-sm font-semibold text-gray-800 ml-1">District <span class="text-red-500">*</span></label>
+          <label class="text-sm font-semibold text-gray-800 ml-1">District</label>
           <div class="relative flex items-center group">
             <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors z-10">
               <i data-lucide="map-pin" class="w-[18px] h-[18px]"></i>
             </div>
-            <select name="district" required
+            <select name="district"
               class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-10 text-gray-900 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 appearance-none cursor-pointer hover:bg-white/80 [&>option]:bg-white [&>option]:text-gray-900">
               <option value="" disabled selected>Select District</option>
               <optgroup label="Karachi Division">
@@ -224,13 +224,12 @@
         </div>
 
         <div class="flex flex-col gap-1.5 w-full">
-          <label class="text-sm font-semibold text-gray-800 ml-1">Place of Current Posting <span
-              class="text-red-500">*</span></label>
+          <label class="text-sm font-semibold text-gray-800 ml-1">Place of Current Posting</label>
           <div class="relative flex items-center group">
             <div class="absolute left-3.5 text-gray-400 group-focus-within:text-green-600 transition-colors z-10">
               <i data-lucide="map-pin" class="w-[18px] h-[18px]"></i>
             </div>
-            <select name="postingPlace" required
+            <select name="postingPlace"
               class="w-full bg-white/50 border border-green-200 rounded-xl py-3 pl-11 pr-10 text-gray-900 outline-none focus:bg-white focus:border-green-400 focus:ring-4 focus:ring-green-400/20 transition-all duration-300 appearance-none cursor-pointer hover:bg-white/80 [&>option]:bg-white [&>option]:text-gray-900">
               <option value="" disabled selected>Select Current Posting District</option>
               <optgroup label="Karachi Division">
@@ -359,7 +358,7 @@
 
   <script>
     lucide.createIcons();
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyOCIG-o-Hn7UUYLaASDVf5DNpTPkxO6atMBTvTDJyFRzPt-uKmdBD7tA0yv0jMC1Y/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzM1OfEi0fCHhnPtP9w1i9__gpygt6zgkdKf2bmwzG9-ob2XZSihc3HhxNMrMaxUK4/exec';
     const form = document.getElementById('seniorityForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = document.getElementById('btnText');
